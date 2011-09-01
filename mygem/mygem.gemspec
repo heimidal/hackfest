@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Hacker"]
   s.email       = ["hacker@quickleft.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{This gem is awesome}
+  s.description = %q{It makes things in to ASCII art.}
 
   s.rubyforge_project = "mygem"
 
@@ -19,5 +19,9 @@ Gem::Specification.new do |s|
 
   # Development Dependencies
   s.add_development_dependency "bundler"  , "~> 1.0.0"
-  s.add_development_dependency "minitest" , "~> 2.2.2"
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "jeweler"
+  s.add_development_dependency "rake"
+  s.add_dependency "httparty"
+  s.add_dependency "googleajax"
 end
