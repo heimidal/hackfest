@@ -16,6 +16,10 @@ module Asciify
         GalleryImage.new(result)
       end
     end
+
+    def to_ascii
+      images.map(&:to_ascii)
+    end
   end
 
   class GalleryImage
