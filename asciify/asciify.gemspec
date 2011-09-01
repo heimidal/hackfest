@@ -1,20 +1,18 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "mygem/version"
+require "asciify/version"
 
 Gem::Specification.new do |s|
-  s.name        = "mygem"
-  s.version     = Mygem::VERSION
-  s.authors     = ["Hacker"]
-  s.email       = ["hacker@quickleft.com"]
+  s.name        = "asciify"
+  s.version     = Asciify::VERSION
+  s.authors     = ["Brian Rose", "Anthony Navarre"]
+  s.email       = ["brian@heimidal.net", "me@anthonynavarre.com"]
   s.homepage    = ""
   s.summary     = %q{This gem is awesome}
   s.description = %q{It makes things in to ASCII art.}
 
-  s.rubyforge_project = "mygem"
-
   s.files = Dir["{lib}/**/*"] + ["Rakefile", "README.md"]
-  s.test_files = Dir["test/**/*"]
+  s.test_files = Dir["spec/**/*"]
   s.require_paths = ["lib"]
 
   # Development Dependencies

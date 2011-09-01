@@ -1,4 +1,4 @@
-require "mygem/version"
+require "asciify/version"
 require "httparty"
 require "googleajax"
 GoogleAjax.referrer = 'localhost'
