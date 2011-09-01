@@ -19,17 +19,22 @@ module Asciify
   end
 
   class GalleryImage
+    DEFAULT_WIDTH = 100
+
     attr_accessor :url
+
     def initialize(params)
       @params = params
       self.url = params[:url]
     end
 
-    def to_ascii(width = 30)
-      return @ascii if @ascii
+    def to_ascii(width=nil)
+      width ||= DEFAULT_WIDTH
+      HTTParty.get("#{ascii_url}&width=#{width}").split("\n")
+    end
 
-      ascii_url = "http://skeeter.blakesmith.me/?image_url=#{url}&width=#{width}"
-      @ascii = HTTParty.get(ascii_url).split("\n")
+    def ascii_url
+      "http://skeeter.blakesmith.me/?image_url=#{url}"
     end
   end
 end
